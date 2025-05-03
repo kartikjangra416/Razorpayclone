@@ -6,6 +6,7 @@ import HeroTriangle from "./assets/Herotriangle.png";
 import featureImage from "./assets/featureImage.webp";
 import smalldot from "./assets/smalldot.png";
 import bigdot from "./assets/bigdot.png";
+import image from "./assets/images.png";
 
 const App = () => {
   return (
@@ -90,52 +91,129 @@ const App = () => {
       </section>
 
       {/* feature section */}
-      <section>
-        <img src={smalldot} className="absolute w-[100px] left-4 mt-10"/>
-        <img src={bigdot} className="absolute w-[80px] right-4 mt-20"/>
-        <div>
+      <section className="relative mt-[160px] ">
+        <img
+          src={smalldot}
+          className="absolute w-[100px] left-[1rem] -top-[4rem] inline-block"
+        />
+        <img
+          src={bigdot}
+          className="absolute w-[80px] right-4 top-[1rem] inline-block"
+        />
+        <div className="relative max-width-[1080px] mx-auto w-10/12 pt-4">
           {/* heading */}
-          <h2>Accept Payment with Razorpay Payment Suite</h2>
-          <div className=" bg-greenLight w-6 h-1 "></div>
+          <h2 className="font-display text-black text-center text-2xl font-extrabold leading-[1.2]">
+            Accept Payment with Razorpay Payment Suite
+          </h2>
+          <div className=" bg-greenLight w-6 h-1 mx-auto mt-4 mb-6"></div>
           {/* content */}
-          <div>
+          <div className="w-full bg-white flex rounded-md relative p-4 py-10 border-[1px] min-h-[520px] border-lightGray">
             {/* content left */}
-            <div>
-              <h3>Supercharge your business with the all-powerfull <span className="text-lightBlue">Payment Gateway</span></h3>
-              <ul>
-                <li>
+            <div className="flex flex-col justify-between w-full">
+              <h3 className="font-display text-[28px] leading-10 max-w-[500px] font-bold">
+                Supercharge your business with the all-powerfull{" "}
+                <span className="text-lightBlue">Payment Gateway</span>
+              </h3>
+              <ul className="space-y-4 font-display">
+                <li className="flex items-start space-x-3">
+                  <div className="bg-greenLight w-2 h-2 mt-1 rounded-full"></div>
                   <span>100+ Payment Methods</span>
                 </li>
-                <li>
-                  <span>Industry Leading Sucess Rate</span>
+                <li className="flex items-start space-x-3">
+                  <div className="bg-greenLight w-2 h-2 mt-1 rounded-full"></div>
+                  <span>Industry Leading Success Rate</span>
                 </li>
-                <li>
+                <li className="flex items-start space-x-3">
+                  <div className="bg-greenLight w-2 h-2 mt-1 rounded-full"></div>
                   <span>Super Checkout Experience</span>
                 </li>
-                <li>
+                <li className="flex items-start space-x-3">
+                  <div className="bg-greenLight w-2 h-2 mt-1 rounded-full"></div>
                   <span>Easy to integrate</span>
                 </li>
-                <li>
+                <li className="flex items-start space-x-3">
+                  <div className="bg-greenLight w-2 h-2 mt-1 rounded-full"></div>
                   <span>Instant Settlements from day 1</span>
                 </li>
-                <li>
+                <li className="flex items-start space-x-3">
+                  <div className="bg-greenLight w-2 h-2 mt-1 rounded-full"></div>
                   <span>In-depth Reporting and Insights</span>
                 </li>
               </ul>
-              <div>
-                <button>Sign Up Now</button>
-                <div>
-                <a href="">Know More</a>
-                <i></i>
-              </div>
+
+              <div className="flex flex-row space-x-4">
+                <button className="py-[14px] px-[18px] font-display rounded-md font-bold bg-lightBlue text-white transition-all duration-200 hover:bg-lightBlue500">Sign Up Now</button>
+                <div className="py-[14px] px-[18px] font-display rounded-md font-bold bg-white border-[1px] border-lightGray text-lightBlue transition-all duration-200 hover:bg-lightGray hover:text-lightBlue500 ">
+                  <a href="">Know More</a>
+                </div>
               </div>
             </div>
             {/* content right */}
-            <div>
-              <img src={featureImage} className="w-full max-w-[680px]"/>
+            <div className="items-center my-auto">
+              <img src={featureImage} className="w-full" />
             </div>
           </div>
         </div>
+
+        <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-4 max-w-[1080px] mx-auto w-10/12 mt-[80px]">
+         
+            <div className="relative w-[300px] h-[140px] border-[1px] border-lightBlue p-[5px] overflow-hidden rounded-md  bg-white">
+            <img src={image} alt="" className="absolute h-[50px] w-[50px] right-0 top-0 "/>
+              <h3 className="font-bold font-display text-black text-xl">TITLE</h3>
+              <p  className="font-display text-black text-[16px] w-[290px]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A numquam quos fugit?</p>
+              <div className="py-[10px] px-[14px] font-display rounded-md font-bold bg-white  text-lightBlue transition-all duration-200 hover:bg-lightGray hover:text-lightBlue500 ">
+                  <a href="">Know More</a>
+                </div>
+            </div>
+
+            <div className="relative w-[300px] h-[140px] border-[1px] border-lightBlue p-[5px] overflow-hidden rounded-md  bg-white">
+            <img src={image} alt="" className="absolute h-[50px] w-[50px] right-0 top-0 "/>
+              <h3 className="font-bold font-display text-black text-xl">TITLE</h3>
+              <p  className="font-display text-black text-[16px] w-[290px]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A numquam quos fugit?</p>
+              <div className="py-[10px] px-[14px] font-display rounded-md font-bold bg-white  text-lightBlue transition-all duration-200 hover:bg-lightGray hover:text-lightBlue500 ">
+                  <a href="">Know More</a>
+                </div>
+            </div>
+
+            <div className="relative w-[300px] h-[140px] border-[1px] border-lightBlue p-[5px] overflow-hidden rounded-md  bg-white">
+            <img src={image} alt="" className="absolute h-[50px] w-[50px] right-0 top-0 "/>
+              <h3 className="font-bold font-display text-black text-xl">TITLE</h3>
+              <p  className="font-display text-black text-[16px] w-[290px]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A numquam quos fugit?</p>
+              <div className="py-[10px] px-[14px] font-display rounded-md font-bold bg-white  text-lightBlue transition-all duration-200 hover:bg-lightGray hover:text-lightBlue500 ">
+                  <a href="">Know More</a>
+                </div>
+            </div>
+
+            <div className="relative w-[300px] h-[140px] border-[1px] border-lightBlue p-[5px] overflow-hidden rounded-md  bg-white">
+            <img src={image} alt="" className="absolute h-[50px] w-[50px] right-0 top-0 "/>
+              <h3 className="font-bold font-display text-black text-xl">TITLE</h3>
+              <p  className="font-display text-black text-[16px] w-[290px]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A numquam quos fugit?</p>
+              <div className="py-[10px] px-[14px] font-display rounded-md font-bold bg-white  text-lightBlue transition-all duration-200 hover:bg-lightGray hover:text-lightBlue500 ">
+                  <a href="">Know More</a>
+                </div>
+            </div>
+
+
+            <div className="relative w-[300px] h-[140px] border-[1px] border-lightBlue p-[5px] overflow-hidden rounded-md  bg-white">
+            <img src={image} alt="" className="absolute h-[50px] w-[50px] right-0 top-0 "/>
+              <h3 className="font-bold font-display text-black text-xl">TITLE</h3>
+              <p  className="font-display text-black text-[16px] w-[290px]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A numquam quos fugit?</p>
+              <div className="py-[10px] px-[14px] font-display rounded-md font-bold bg-white  text-lightBlue transition-all duration-200 hover:bg-lightGray hover:text-lightBlue500 ">
+                  <a href="">Know More</a>
+                </div>
+            </div>
+
+            <div className="relative w-[300px] h-[140px] border-[1px] border-lightBlue p-[5px] overflow-hidden rounded-md  bg-white">
+            <img src={image} alt="" className="absolute h-[50px] w-[50px] right-0 top-0 "/>
+              <h3 className="font-bold font-display text-black text-xl">TITLE</h3>
+              <p  className="font-display text-black text-[16px] w-[290px]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A numquam quos fugit?</p>
+              <div className="py-[10px] px-[14px] font-display rounded-md font-bold bg-white  text-lightBlue transition-all duration-200 hover:bg-lightGray hover:text-lightBlue500 ">
+                  <a href="">Know More</a>
+                </div>
+            </div>
+
+          </div>
+        
       </section>
     </>
   );
